@@ -17,12 +17,19 @@ import "./App.css";
 // ----------------- useRef ------------------------
 // import CountDownRef from "./Exercises/useRef/CountDownRef";
 // import TrackingState from "./Exercises/useRef/TrackingState";
-import AutoFocus from "./Exercises/useRef/AutoFocus";
+// import AutoFocus from "./Exercises/useRef/AutoFocus";
+
+// ----------------- useReducer ------------------------
+// import Counter from "./Exercises/useReducer/Counter";
+// import HandleForm from "./Exercises/useReducer/HandleForm";
+
+// ----------------- useReducer ------------------------
+import ParentContext from "./Exercises/useContext/Parent";
 
 function App() {
   return (
     <div className="App">
-      <AutoFocus />
+      <ParentContext />
     </div>
   );
 }
