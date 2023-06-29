@@ -4,3 +4,7 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+.navlink {
+  text-decoration: none;
+  color: black;
+}

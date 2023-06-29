@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 /*
 1. Counter
@@ -25,6 +28,22 @@ function Counter() {
     <div>
       <button onClick={handleIncrement}>Increment</button>
       <p>Count: {count}</p>
+
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "plum",
+            borderColor: "plum",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }
