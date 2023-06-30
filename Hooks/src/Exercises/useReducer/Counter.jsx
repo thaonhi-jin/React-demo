@@ -1,4 +1,8 @@
 import React, { useReducer, useRef } from "react";
+
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 /**
  * Requirement: Counter tăng giảm với số lượng tùy ý, reset về giá trị khởi tạo
  * Basic: Counter tăng giảm 1
@@ -74,6 +78,23 @@ function Counter() {
       >
         Reset
       </button>
+      <br />
+
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "orangered",
+            borderColor: "orangered",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }

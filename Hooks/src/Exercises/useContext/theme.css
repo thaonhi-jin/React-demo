@@ -1,7 +1,5 @@
-body {
-  width: 200px;
-}
 .dark {
   background-color: black;
   color: white;
+  width: 400px;
 }

@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 /**
  * Requirement: tạo ra 1 bộ máy countdown có thể start và stop, sử dụng useRef để hỗ trợ
  * Bonus: sau đó tìm cách in ra giá trị trước và sau của count sau mỗi giây đếm ngược.
@@ -32,6 +35,22 @@ function CountDownRef() {
       <h1>{num}</h1>
       <button onClick={handleStartBtn}>Start</button>
       <button onClick={handleStopBtn}>Stop</button>
+
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "goldenrod",
+            borderColor: "goldenrod",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }

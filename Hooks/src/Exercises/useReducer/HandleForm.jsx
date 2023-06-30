@@ -1,4 +1,7 @@
 import React, { useReducer } from "react";
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const initialInfo = {
   username: "",
@@ -50,7 +53,23 @@ function HandleForm() {
         }
       >
         Reset
-      </button>
+      </button>{" "}
+      <br />
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "orangered",
+            borderColor: "orangered",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }

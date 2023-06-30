@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+
 /**
  * Requirement: User tự chọn 1 trong các option sau: posts, comments, albums,...
  * Giao diện sẽ render dữ liệu được lấy từ trang https://jsonplaceholder.typicode.com/ tương ứng với từng option
@@ -46,6 +50,22 @@ function Fetching() {
           : "You haven't chosen yet!"}
       </ul>
       {/* {console.log("hi1")} */}
+
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "green",
+            borderColor: "green",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }

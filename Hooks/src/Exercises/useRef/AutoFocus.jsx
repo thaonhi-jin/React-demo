@@ -1,4 +1,7 @@
 import React, { useRef } from "react";
+import { NavLink } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 /**
  * Requirement: Khi click vào button thì con trỏ chuột sẽ nằm ở ô Input (ô Input được focus)
  * https://www.w3schools.com/react/showreact.asp?filename=demo2_react_useref2
@@ -19,6 +22,22 @@ function AutoFocus() {
     <div>
       <input type="text" ref={focusInput} />
       <button onClick={handleFocusInput}>Focus Input</button>
+
+      <NavLink to="/">
+        <Button
+          variant="outlined"
+          style={{
+            color: "goldenrod",
+            borderColor: "goldenrod",
+            margin: "20px",
+          }}
+          startIcon={
+            <ArrowRightAltIcon style={{ transform: "rotate(180deg)" }} />
+          }
+        >
+          Back
+        </Button>
+      </NavLink>
     </div>
   );
 }
